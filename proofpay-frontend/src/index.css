@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-display: 'Plus Jakarta Sans', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  font-family: 'Plus Jakarta Sans', Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #0f172a;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   STANDARDIZED PROOFPAY TYPOGRAPHY SYSTEM
+   Scale:
+   - Page Titles: 28–32px, bold/semibold, tracking-tight
+   - Section Headings: 20–24px, semibold, tracking-tight
+   - Card Headings: 16–18px, semibold
+   - Body Text: 14–16px, regular, leading-relaxed
+   - Secondary Text: 13–14px, regular/medium, muted
+   - Labels: 13–14px, medium
+   - Metadata / Helper: 12–13px, regular
+   - Buttons: 14–15px, medium/semibold
+   - Key Financial Values: 24–32px, bold, tabular numbers
+   ========================================================================== */
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-page-title {
+  font-size: 1.75rem; /* 28px */
+  line-height: 2.125rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+}
+@media (min-width: 640px) {
+  .text-page-title {
+    font-size: 1.875rem; /* 30px */
+    line-height: 2.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  .text-page-title {
+    font-size: 2rem; /* 32px */
+    line-height: 2.375rem;
+  }
+}
+
+.text-section-heading {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+@media (min-width: 640px) {
+  .text-section-heading {
+    font-size: 1.375rem; /* 22px */
+    line-height: 1.875rem;
+  }
+}
+@media (min-width: 1024px) {
+  .text-section-heading {
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem;
+  }
+}
+
+.text-card-heading {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: #0f172a;
+}
+@media (min-width: 640px) {
+  .text-card-heading {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.625rem;
+  }
+}
+
+.text-body-text {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5rem;
+  color: #334155;
+}
+@media (min-width: 640px) {
+  .text-body-text {
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.6rem;
+  }
+}
+
+.text-secondary {
+  font-size: 0.8125rem; /* 13px */
+  line-height: 1.375rem;
+  color: #64748b;
+}
+@media (min-width: 640px) {
+  .text-secondary {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.45rem;
+  }
+}
+
+.text-form-label {
+  font-size: 0.8125rem; /* 13px */
+  line-height: 1.25rem;
+  font-weight: 500;
+  color: #334155;
+}
+@media (min-width: 640px) {
+  .text-form-label {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.35rem;
+  }
+}
+
+.text-metadata {
+  font-size: 0.75rem; /* 12px */
+  line-height: 1.125rem;
+  color: #64748b;
+}
+
+.text-stat-value {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #0f172a;
+  font-variant-numeric: tabular-nums;
+}
+@media (min-width: 640px) {
+  .text-stat-value {
+    font-size: 1.75rem; /* 28px */
+    line-height: 2.25rem;
+  }
+}
