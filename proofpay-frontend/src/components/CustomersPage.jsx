@@ -234,10 +234,10 @@ export default function CustomersPage() {
             <p className="text-sm text-slate-500">Total Customers</p>
             <Users className="text-blue-600" size={21} />
           </div>
-          <p className="mt-3 text-2xl font-bold text-slate-900">
+          <p className="mt-3 text-[26px] font-bold tracking-tight text-slate-900">
             {customers.length}
           </p>
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-1 text-[13px] text-slate-500">
             Registered business customers
           </p>
         </div>
@@ -247,10 +247,10 @@ export default function CustomersPage() {
             <p className="text-sm text-slate-500">Outstanding Balance</p>
             <Users className="text-orange-600" size={21} />
           </div>
-          <p className="mt-3 text-2xl font-bold text-slate-900">
+          <p className="mt-3 text-[26px] font-bold tracking-tight text-slate-900">
             {currency(totalOutstanding)}
           </p>
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-1 text-[13px] text-slate-500">
             Across registered customers
           </p>
         </div>
@@ -260,10 +260,10 @@ export default function CustomersPage() {
             <p className="text-sm text-slate-500">Customers With Dues</p>
             <Users className="text-rose-600" size={21} />
           </div>
-          <p className="mt-3 text-2xl font-bold text-slate-900">
+          <p className="mt-3 text-[26px] font-bold tracking-tight text-slate-900">
             {customers.filter((customer) => (customer.outstanding || 0) > 0).length}
           </p>
-          <p className="mt-1 text-sm text-slate-500">
+          <p className="mt-1 text-[13px] text-slate-500">
             Customers with an outstanding balance
           </p>
         </div>
@@ -272,10 +272,10 @@ export default function CustomersPage() {
       <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <h2 className="text-lg font-semibold text-slate-900">
+            <h2 className="text-[20px] font-semibold tracking-tight text-slate-900">
               All Customers
             </h2>
-            <p className="mt-1 text-sm text-slate-500">
+            <p className="mt-1 text-[13px] text-slate-500">
               Manage your retailers, shops, and business customers.
             </p>
           </div>
@@ -307,11 +307,11 @@ export default function CustomersPage() {
           <table className="w-full min-w-[720px] text-left text-sm">
             <thead>
               <tr className="border-b border-slate-100 text-slate-500">
-                <th className="px-3 py-3 font-medium">Customer</th>
-                <th className="px-3 py-3 font-medium">Contact</th>
-                <th className="px-3 py-3 font-medium">City</th>
-                <th className="px-3 py-3 font-medium">Outstanding</th>
-                <th className="px-3 py-3 text-right font-medium">Actions</th>
+                <th className="px-3 py-3 text-[13px] font-medium">Customer</th>
+                <th className="px-3 py-3 text-[13px] font-medium">Contact</th>
+                <th className="px-3 py-3 text-[13px] font-medium">City</th>
+                <th className="px-3 py-3 text-[13px] font-medium">Outstanding</th>
+                <th className="px-3 py-3 text-[13px] text-right font-medium">Actions</th>
               </tr>
             </thead>
 
@@ -330,7 +330,7 @@ export default function CustomersPage() {
                         <p className="font-medium text-slate-800">
                           {customer.name}
                         </p>
-                        <p className="mt-1 text-xs text-slate-400">
+                        <p className="mt-1 text-[12px] text-slate-400">
                           {customer.phone}
                         </p>
                       </div>
@@ -342,7 +342,7 @@ export default function CustomersPage() {
                       <Phone size={14} className="text-slate-400" />
                       {customer.phone}
                     </div>
-                    <div className="mt-1 flex items-center gap-2 text-xs text-slate-500">
+                    <div className="mt-1 flex items-center gap-2 text-[12px] text-slate-500">
                       <Mail size={13} className="text-slate-400" />
                       {customer.email || 'No email added'}
                     </div>
@@ -391,10 +391,10 @@ export default function CustomersPage() {
                   >
                     <div className="flex flex-col items-center justify-center">
                       <Inbox size={40} className="text-slate-300" strokeWidth={1.5} />
-                      <p className="mt-3 font-medium text-slate-700">
+                      <p className="mt-3 text-[15px] font-medium text-slate-700">
                         {search ? 'No matching customers found' : 'No customers yet'}
                       </p>
-                      <p className="mt-1 text-xs text-slate-400">
+                      <p className="mt-1 text-[13px] text-slate-400">
                         {search
                           ? 'Try modifying your search query.'
                           : 'Click "Add Customer" to add your first business customer.'}
@@ -407,7 +407,7 @@ export default function CustomersPage() {
           </table>
         </div>
 
-        <p className="mt-4 text-xs text-slate-400">
+        <p className="mt-4 text-[12px] text-slate-400">
           Showing {filteredCustomers.length} of {customers.length} customers
         </p>
       </div>
@@ -424,11 +424,11 @@ export default function CustomersPage() {
               <div>
                 <h3
                   id="customer-form-title"
-                  className="text-lg font-semibold text-slate-900"
+                  className="text-[20px] font-semibold tracking-tight text-slate-900"
                 >
                   {editingId ? 'Edit Customer' : 'Add New Customer'}
                 </h3>
-                <p className="mt-0.5 text-xs text-slate-500">
+                <p className="mt-0.5 text-[13px] text-slate-500">
                   {editingId
                     ? 'Update customer details in the database.'
                     : 'Save customer details for invoice and payment tracking.'}

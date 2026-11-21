@@ -109,7 +109,7 @@ export default function AccountSettingsPage() {
           <span className="block text-sm font-medium text-slate-800">
             {title}
           </span>
-          <span className="mt-1 block text-sm leading-5 text-slate-500">
+          <span className="mt-1 block text-[13px] leading-5 text-slate-500">
             {description}
           </span>
         </span>
@@ -128,13 +128,13 @@ export default function AccountSettingsPage() {
   return (
     <section className="mx-auto w-full max-w-[1000px] space-y-6 pb-8">
       <header>
-        <div className="mb-2 flex items-center gap-2 text-xs font-medium text-slate-400">
+        <div className="mb-2 flex items-center gap-2 text-[12px] font-medium text-slate-400">
           <span>Workspace</span>
           <span>/</span>
           <span className="text-blue-600">Account Settings</span>
         </div>
 
-        <h1 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-[28px]">
+        <h1 className="text-[26px] sm:text-[28px] font-semibold tracking-tight text-slate-900">
           Account Settings
         </h1>
 
@@ -151,7 +151,7 @@ export default function AccountSettingsPage() {
             </span>
 
             <div>
-              <h2 className="font-semibold text-slate-900">
+              <h2 className="text-[16px] font-semibold text-slate-900">
                 Personal information
               </h2>
               <p className="mt-1 text-sm text-slate-500">
@@ -203,7 +203,7 @@ export default function AccountSettingsPage() {
             </span>
 
             <div>
-              <h2 className="font-semibold text-slate-900">
+              <h2 className="text-[16px] font-semibold text-slate-900">
                 Business information
               </h2>
               <p className="mt-1 text-sm text-slate-500">
@@ -249,7 +249,7 @@ export default function AccountSettingsPage() {
             </span>
 
             <div>
-              <h2 className="font-semibold text-slate-900">Security</h2>
+              <h2 className="text-[16px] font-semibold text-slate-900">Security</h2>
               <p className="mt-1 text-sm text-slate-500">
                 Preview your account security preferences.
               </p>
@@ -317,7 +317,7 @@ export default function AccountSettingsPage() {
         </section>
 
         <div className="flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs leading-5 text-slate-400">
+          <p className="text-[12px] leading-5 text-slate-400">
             Changes are saved in this browser only. Backend synchronization is not connected yet.
           </p>
 

@@ -91,7 +91,7 @@ function StatusBadge({ status }) {
   const label = status ? status.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) : 'Unpaid'
 
   return (
-    <span className={`whitespace-nowrap rounded-full px-2.5 py-1 text-xs font-medium ${styles[status] || styles[label] || 'bg-slate-100 text-slate-700'}`}>
+    <span className={`whitespace-nowrap rounded-full px-2.5 py-1 text-[12px] font-medium ${styles[status] || styles[label] || 'bg-slate-100 text-slate-700'}`}>
       {label}
     </span>
   )
@@ -395,7 +395,7 @@ export default function InvoicesPage() {
         ].map((stat) => (
           <div key={stat.label} className="rounded-2xl border border-slate-200 bg-white p-5">
             <p className="text-sm text-slate-500">{stat.label}</p>
-            <p className={`mt-3 break-words text-2xl font-bold ${stat.color}`}>
+            <p className={`mt-3 break-words text-[26px] font-bold tracking-tight ${stat.color}`}>
               {stat.value}
             </p>
           </div>
@@ -405,7 +405,7 @@ export default function InvoicesPage() {
       <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <h2 className="text-lg font-semibold text-slate-900">All Invoices</h2>
+            <h2 className="text-[20px] font-semibold tracking-tight text-slate-900">All Invoices</h2>
             <p className="mt-1 text-sm text-slate-500">
               Create invoices and track payments due from customers.
             </p>
@@ -435,14 +435,14 @@ export default function InvoicesPage() {
           <table className="w-full min-w-[780px] text-left text-sm">
             <thead>
               <tr className="border-b border-slate-100 text-slate-500">
-                <th className="px-3 py-3 font-medium">Invoice</th>
-                <th className="px-3 py-3 font-medium">Customer</th>
-                <th className="px-3 py-3 font-medium">Issue Date</th>
-                <th className="px-3 py-3 font-medium">Due Date</th>
-                <th className="px-3 py-3 font-medium">Total</th>
-                <th className="px-3 py-3 font-medium">Balance</th>
-                <th className="px-3 py-3 font-medium">Status</th>
-                <th className="px-3 py-3 text-right font-medium">Actions</th>
+                <th className="px-3 py-3 text-[13px] font-medium">Invoice</th>
+                <th className="px-3 py-3 text-[13px] font-medium">Customer</th>
+                <th className="px-3 py-3 text-[13px] font-medium">Issue Date</th>
+                <th className="px-3 py-3 text-[13px] font-medium">Due Date</th>
+                <th className="px-3 py-3 text-[13px] font-medium">Total</th>
+                <th className="px-3 py-3 text-[13px] font-medium">Balance</th>
+                <th className="px-3 py-3 text-[13px] font-medium">Status</th>
+                <th className="px-3 py-3 text-[13px] text-right font-medium">Actions</th>
               </tr>
             </thead>
 
@@ -480,10 +480,10 @@ export default function InvoicesPage() {
                   <td colSpan={8} className="px-3 py-14 text-center text-slate-500">
                     <div className="flex flex-col items-center justify-center">
                       <Inbox size={40} className="text-slate-300" strokeWidth={1.5} />
-                      <p className="mt-3 font-medium text-slate-700">
+                      <p className="mt-3 text-[15px] font-medium text-slate-700">
                         {search ? 'No matching invoices found' : 'No invoices yet'}
                       </p>
-                      <p className="mt-1 text-xs text-slate-400">
+                      <p className="mt-1 text-[13px] text-slate-400">
                         {search
                           ? 'Try modifying your search term.'
                           : 'Click "Create Invoice" to issue your first invoice.'}
@@ -496,7 +496,7 @@ export default function InvoicesPage() {
           </table>
         </div>
 
-        <p className="mt-4 text-xs text-slate-400">
+        <p className="mt-4 text-[12px] text-slate-400">
           Showing {filteredInvoices.length} of {invoices.length} invoices
         </p>
       </div>
@@ -506,7 +506,7 @@ export default function InvoicesPage() {
           <div role="dialog" aria-modal="true" aria-labelledby="create-invoice-title" className="my-auto max-h-[92vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-white p-6 shadow-xl">
             <div className="mb-6 flex items-start justify-between">
               <div>
-                <h2 id="create-invoice-title" className="text-xl font-semibold text-slate-900">Create Invoice</h2>
+                <h2 id="create-invoice-title" className="text-[20px] font-semibold tracking-tight text-slate-900">Create Invoice</h2>
                 <p className="mt-1 text-sm text-slate-500">Enter customer and billing details.</p>
               </div>
               <button type="button" aria-label="Close form" onClick={() => setModalOpen(false)} className="rounded-lg p-2 text-slate-400 hover:bg-slate-100">
@@ -649,7 +649,7 @@ export default function InvoicesPage() {
         <div className="fixed inset-0 z-[60] flex items-center justify-center overflow-y-auto bg-slate-950/50 p-4">
           <div className="my-auto max-h-[92vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-6 shadow-xl print:!static print:!max-h-none print:!max-w-none print:!overflow-visible print:!rounded-none print:!shadow-none">
             <div className="mb-6 flex flex-wrap items-center justify-between gap-3 print:hidden">
-              <h2 className="text-xl font-semibold text-slate-900">Invoice Details</h2>
+              <h2 className="text-[20px] font-semibold tracking-tight text-slate-900">Invoice Details</h2>
               <div className="flex gap-2">
                 <button type="button" onClick={() => printInvoice(selectedInvoice)} className="flex items-center gap-2 rounded-xl bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-700">
                   <Printer size={16} /> Print / PDF
@@ -663,11 +663,11 @@ export default function InvoicesPage() {
             <div id="printable-invoice">
               <div className="flex flex-wrap justify-between gap-4 border-b border-slate-200 pb-6">
                 <div>
-                  <h2 className="text-2xl font-bold text-blue-600">ProofPay</h2>
+                  <h2 className="text-[24px] font-bold tracking-tight text-blue-600">ProofPay</h2>
                   <p className="mt-1 text-sm text-slate-500">Invoice and payment tracking</p>
                 </div>
                 <div className="text-right">
-                  <h3 className="text-xl font-bold text-slate-900">INVOICE</h3>
+                  <h3 className="text-[18px] font-bold text-slate-900">INVOICE</h3>
                   <p className="mt-1 text-sm text-slate-600">{selectedInvoice.invoiceNumber || selectedInvoice.id}</p>
                   <div className="mt-2"><StatusBadge status={selectedInvoice.status || invoiceStatus(selectedInvoice)} /></div>
                 </div>
@@ -675,7 +675,7 @@ export default function InvoicesPage() {
 
               <div className="grid gap-5 py-6 sm:grid-cols-2">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Bill To</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-400">Bill To</p>
                   <p className="mt-2 font-semibold text-slate-900">
                     {selectedInvoice.customerName || selectedInvoice.customerId?.name || 'Customer'}
                   </p>
@@ -720,7 +720,7 @@ export default function InvoicesPage() {
                 <div className="flex justify-between rounded-lg bg-blue-50 p-3 font-bold text-blue-800"><span>Balance Due</span><span>{currency(invoiceBalance(selectedInvoice))}</span></div>
               </div>
 
-              <p className="mt-10 border-t border-slate-200 pt-4 text-center text-xs text-slate-400">
+              <p className="mt-10 border-t border-slate-200 pt-4 text-center text-[12px] text-slate-400">
                 Thank you for your business.
               </p>
             </div>

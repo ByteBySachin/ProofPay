@@ -49,13 +49,13 @@ export default function LoginPage({ onNavigate, onSwitchPage }) {
         <div className="grid w-full overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl md:grid-cols-2">
           <section className="hidden flex-col justify-between bg-gradient-to-br from-blue-700 via-blue-600 to-indigo-700 p-10 text-white md:flex">
             <button type="button" onClick={goHome} className="flex w-fit items-center gap-2 text-xl font-bold"><span className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/15">✓</span>ProofPay</button>
-            <div><p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-blue-100">Welcome back</p><h1 className="max-w-md text-4xl font-bold leading-tight">Know what’s paid. Know what’s next.</h1><p className="mt-5 max-w-md leading-7 text-blue-100">Bring customer records, invoices, payments, and outstanding balances into one clear workspace.</p></div>
-            <p className="text-sm text-blue-100">A clearer way to manage your business.</p>
+            <div><p className="mb-3 text-[12px] font-semibold uppercase tracking-widest text-blue-100">Welcome back</p><h1 className="max-w-md text-[32px] font-bold leading-tight tracking-tight">Know what’s paid. Know what’s next.</h1><p className="mt-5 max-w-md text-[15px] leading-7 text-blue-100">Bring customer records, invoices, payments, and outstanding balances into one clear workspace.</p></div>
+            <p className="text-[13px] text-blue-100">A clearer way to manage your business.</p>
           </section>
           <section className="p-6 sm:p-10 lg:p-12">
             <button type="button" onClick={goHome} className="mb-8 flex items-center gap-2 text-lg font-bold text-slate-900 md:hidden"><span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-white">✓</span>ProofPay</button>
             <div className="mx-auto max-w-md">
-              <div className="mb-8"><p className="text-sm font-semibold text-blue-600">YOUR WORKSPACE</p><h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">Sign in to ProofPay</h2><p className="mt-2 text-sm leading-6 text-slate-500">Enter your account details to continue.</p></div>
+              <div className="mb-8"><p className="text-[12px] font-semibold uppercase tracking-wider text-blue-600">YOUR WORKSPACE</p><h2 className="mt-2 text-[26px] font-bold tracking-tight text-slate-900">Sign in to ProofPay</h2><p className="mt-2 text-[14px] leading-relaxed text-slate-500">Enter your account details to continue.</p></div>
               {error && <div role="alert" className="mb-5 flex gap-2 rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-700"><AlertCircle size={18} className="mt-0.5 shrink-0" />{error}</div>}
               {success && <div role="status" className="mb-5 flex gap-2 rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-sm text-emerald-700"><CheckCircle2 size={18} className="mt-0.5 shrink-0" />{success}</div>}
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -64,7 +64,7 @@ export default function LoginPage({ onNavigate, onSwitchPage }) {
                 <button disabled={loading} type="submit" className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-3.5 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60">{loading ? "Signing in…" : "Sign in"}{!loading && <ArrowRight size={17} />}</button>
               </form>
               <p className="mt-7 text-center text-sm text-slate-500">New to ProofPay? <button type="button" onClick={goToSignup} className="font-semibold text-blue-600 hover:text-blue-700">Create an account</button></p>
-              <p className="mt-8 text-center text-xs leading-5 text-slate-400">For production, use secure HttpOnly cookie-based authentication and appropriate account protections.</p>
+              <p className="mt-8 text-center text-[12px] leading-5 text-slate-400">For production, use secure HttpOnly cookie-based authentication and appropriate account protections.</p>
             </div>
           </section>
         </div>

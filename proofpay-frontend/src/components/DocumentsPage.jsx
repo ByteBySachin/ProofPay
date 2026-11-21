@@ -90,7 +90,7 @@ function StatCard({ label, value, helper, icon: Icon, tone }) {
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="text-sm font-medium text-slate-500">{label}</p>
-          <p className="mt-3 break-words text-2xl font-semibold tracking-tight text-slate-900">
+          <p className="mt-3 break-words text-[26px] font-bold tracking-tight text-slate-900">
             {value}
           </p>
         </div>
@@ -98,7 +98,7 @@ function StatCard({ label, value, helper, icon: Icon, tone }) {
           <Icon size={20} strokeWidth={1.8} />
         </span>
       </div>
-      <p className="mt-3 text-xs text-slate-400">{helper}</p>
+      <p className="mt-3 text-[12px] text-slate-400">{helper}</p>
     </div>
   )
 }
@@ -223,12 +223,12 @@ export default function DocumentsPage() {
       {/* Page header */}
       <header className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
         <div>
-          <div className="mb-2 flex items-center gap-2 text-xs font-medium text-slate-400">
+          <div className="mb-2 flex items-center gap-2 text-[12px] font-medium text-slate-400">
             <span>Workspace</span>
             <span className="text-slate-300">/</span>
             <span className="text-blue-600">Documents</span>
           </div>
-          <h1 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-[28px]">
+          <h1 className="text-[26px] sm:text-[28px] font-semibold tracking-tight text-slate-900">
             Documents
           </h1>
           <p className="mt-1.5 max-w-2xl text-sm leading-6 text-slate-500">
@@ -307,11 +307,11 @@ export default function DocumentsPage() {
               <Upload size={20} />
             </div>
             <div>
-              <h2 className="font-semibold text-slate-900">Add a document</h2>
+              <h2 className="text-[18px] font-semibold tracking-tight text-slate-900">Add a document</h2>
               <p className="mt-1 text-sm leading-5 text-slate-500">
                 Drag and drop a file here, or choose one from your computer.
               </p>
-              <p className="mt-1.5 text-xs text-slate-400">
+              <p className="mt-1.5 text-[12px] text-slate-400">
                 PDF, JPG or PNG · Maximum 10 MB per file
               </p>
             </div>
@@ -400,7 +400,7 @@ export default function DocumentsPage() {
       <section className="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm shadow-slate-200/30">
         <div className="flex flex-col gap-4 border-b border-slate-100 px-5 py-5 sm:px-6 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <h2 className="text-base font-semibold text-slate-900">Your documents</h2>
+            <h2 className="text-[18px] font-semibold tracking-tight text-slate-900">Your documents</h2>
             <p className="mt-1 text-sm text-slate-500">
               Search, preview, and manage your business files.
             </p>
@@ -440,7 +440,7 @@ export default function DocumentsPage() {
                 }`}
               >
                 {category}
-                <span className={`rounded-md px-1.5 py-0.5 text-xs ${
+                <span className={`rounded-md px-1.5 py-0.5 text-[12px] ${
                   active ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'
                 }`}>
                   {count}
@@ -455,7 +455,7 @@ export default function DocumentsPage() {
             <div className="overflow-x-auto">
               <table className="w-full min-w-[760px] text-left text-sm">
                 <thead className="bg-slate-50/70">
-                  <tr className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+                  <tr className="text-[12px] font-semibold uppercase tracking-wide text-slate-400">
                     <th className="px-6 py-3.5">Document</th>
                     <th className="px-4 py-3.5">Category</th>
                     <th className="px-4 py-3.5">Customer</th>
@@ -477,14 +477,14 @@ export default function DocumentsPage() {
                               <p className="max-w-[260px] truncate font-medium text-slate-800">
                                 {document.name}
                               </p>
-                              <p className="mt-1 text-xs text-slate-400">
+                              <p className="mt-1 text-[12px] text-slate-400">
                                 {getFileType(document)} file
                               </p>
                             </div>
                           </div>
                         </td>
                         <td className="px-4 py-4">
-                          <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg bg-slate-100 px-2.5 py-1.5 text-xs font-medium text-slate-600">
+                          <span className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg bg-slate-100 px-2.5 py-1.5 text-[12px] font-medium text-slate-600">
                             <CategoryIcon size={14} />
                             {document.category}
                           </span>
@@ -536,7 +536,7 @@ export default function DocumentsPage() {
               </table>
             </div>
 
-            <div className="flex flex-col gap-2 border-t border-slate-100 px-6 py-4 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-col gap-2 border-t border-slate-100 px-6 py-4 text-[12px] text-slate-400 sm:flex-row sm:items-center sm:justify-between">
               <span>
                 Showing <span className="font-semibold text-slate-600">{filteredDocuments.length}</span> of{' '}
                 <span className="font-semibold text-slate-600">{documents.length}</span> documents
@@ -554,7 +554,7 @@ export default function DocumentsPage() {
                   <FolderOpen size={26} strokeWidth={1.6} />
                 )}
               </div>
-              <h3 className="mt-4 text-base font-semibold text-slate-900">
+              <h3 className="mt-4 text-[16px] font-semibold text-slate-900">
                 {search || activeCategory !== 'All Documents'
                   ? 'No matching documents'
                   : 'Your document space is ready'}
@@ -588,7 +588,7 @@ export default function DocumentsPage() {
 
       <div className="flex items-start gap-2 rounded-xl border border-blue-100 bg-blue-50/60 px-4 py-3.5">
         <FileCheck2 size={17} className="mt-0.5 shrink-0 text-blue-600" />
-        <p className="text-xs leading-5 text-slate-600">
+        <p className="text-[12px] leading-5 text-slate-600">
           <span className="font-semibold text-slate-700">Demo storage:</span>{' '}
           uploaded files currently remain in temporary browser memory. Connect a backend and secure file storage before using this page for real business records.
         </p>
@@ -610,7 +610,7 @@ export default function DocumentsPage() {
                   <h3 className="truncate text-sm font-semibold text-slate-900 sm:text-base">
                     {selectedDocument.name}
                   </h3>
-                  <p className="mt-1 text-xs text-slate-500">
+                  <p className="mt-1 text-[12px] text-slate-500">
                     {selectedDocument.category} · {formatBytes(selectedDocument.size)}
                   </p>
                 </div>

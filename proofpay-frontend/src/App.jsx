@@ -704,9 +704,9 @@ function App() {
               {topDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-56 rounded-2xl border border-slate-200 bg-white p-2 text-slate-800 shadow-xl z-50 animate-in fade-in zoom-in-95">
                   <div className="border-b border-slate-100 px-3 py-2.5">
-                    <p className="text-xs font-bold text-slate-900 truncate">{userName}</p>
-                    <p className="text-[11px] text-slate-500 truncate">{profile.email || 'user@proofpay.com'}</p>
-                    <span className="mt-1 inline-block rounded-md bg-blue-50 px-2 py-0.5 text-[10px] font-semibold text-blue-700">
+                    <p className="text-[13px] font-semibold text-slate-900 truncate">{userName}</p>
+                    <p className="text-[12px] text-slate-500 truncate">{profile.email || 'user@proofpay.com'}</p>
+                    <span className="mt-1 inline-block rounded-md bg-blue-50 px-2 py-0.5 text-[11px] font-semibold text-blue-700">
                       {roleName}
                     </span>
                   </div>
@@ -715,7 +715,7 @@ function App() {
                     <button
                       type="button"
                       onClick={() => navigate('View Profile')}
-                      className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2 text-left text-xs font-medium text-slate-700 hover:bg-slate-50 transition"
+                      className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-slate-700 hover:bg-slate-50 transition"
                     >
                       <UserRound size={15} className="text-blue-600" />
                       <span>My Profile</span>
@@ -724,7 +724,7 @@ function App() {
                     <button
                       type="button"
                       onClick={() => navigate('Account Settings')}
-                      className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2 text-left text-xs font-medium text-slate-700 hover:bg-slate-50 transition"
+                      className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2 text-left text-[13px] font-medium text-slate-700 hover:bg-slate-50 transition"
                     >
                       <Settings size={15} className="text-slate-500" />
                       <span>Account Settings</span>
@@ -735,7 +735,7 @@ function App() {
                     <button
                       type="button"
                       onClick={handleLogout}
-                      className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2 text-left text-xs font-semibold text-red-600 hover:bg-red-50 transition"
+                      className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2 text-left text-[13px] font-semibold text-red-600 hover:bg-red-50 transition"
                     >
                       <LogOut size={15} />
                       <span>Sign Out</span>

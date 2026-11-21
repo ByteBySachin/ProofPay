@@ -244,12 +244,12 @@ export default function ProfilePage() {
 
       {/* 1. Page Header (Single cohesive breadcrumb + title, no redundant button) */}
       <div>
-        <nav aria-label="Breadcrumb" className="mb-1 flex items-center gap-1.5 text-xs font-medium text-slate-400">
+        <nav aria-label="Breadcrumb" className="mb-1 flex items-center gap-1.5 text-[12px] font-medium text-slate-400">
           <span>Workspace</span>
           <span>/</span>
           <span className="text-slate-700 font-semibold">My Profile</span>
         </nav>
-        <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+        <h1 className="text-[26px] sm:text-[30px] font-bold tracking-tight text-slate-900">
           My Profile
         </h1>
         <p className="mt-1 text-sm text-slate-500">
@@ -268,7 +268,7 @@ export default function ProfilePage() {
 
           {/* Verified Badge */}
           <div className="absolute right-4 top-4">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-xs font-semibold text-white backdrop-blur-md border border-white/25 shadow-xs">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-[12px] font-semibold text-white backdrop-blur-md border border-white/25 shadow-xs">
               <ShieldCheck size={14} className="text-emerald-300" />
               Verified Business
             </span>
@@ -307,19 +307,19 @@ export default function ProfilePage() {
               {/* Name, Badges, and Details */}
               <div className="min-w-0">
                 <div className="flex flex-wrap items-center gap-2">
-                  <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-900 truncate">
+                  <h2 className="text-[22px] sm:text-[26px] font-bold tracking-tight text-slate-900 truncate">
                     {profile.fullName || 'Your Name'}
                   </h2>
-                  <span className="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-semibold text-blue-700 border border-blue-200/60">
+                  <span className="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-[12px] font-semibold text-blue-700 border border-blue-200/60">
                     {roleName}
                   </span>
-                  <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-semibold text-emerald-700 border border-emerald-200/60">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-0.5 text-[12px] font-semibold text-emerald-700 border border-emerald-200/60">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
                     Active
                   </span>
                 </div>
 
-                <p className="mt-1 text-xs sm:text-sm text-slate-500 truncate max-w-xl">
+                <p className="mt-1 text-[13px] sm:text-[14px] text-slate-500 truncate max-w-xl">
                   {profile.businessName ? `${profile.businessName} · ` : ''}
                   {profile.bio || 'Managing B2B invoices and payment settlements in ProofPay.'}
                 </p>
@@ -331,7 +331,7 @@ export default function ProfilePage() {
               <button
                 type="button"
                 onClick={() => setEditingPersonal(true)}
-                className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-xs transition hover:bg-slate-800"
+                className="inline-flex items-center gap-2 rounded-xl bg-slate-900 px-4 py-2.5 text-[13px] sm:text-[14px] font-semibold text-white shadow-xs transition hover:bg-slate-800"
               >
                 <Edit3 size={15} />
                 Edit Profile
@@ -359,13 +359,13 @@ export default function ProfilePage() {
               <Building2 size={20} />
             </div>
             <div className="min-w-0">
-              <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
                 Business Entity
               </p>
-              <p className="mt-0.5 truncate text-lg font-bold text-slate-900">
+              <p className="mt-0.5 truncate text-[20px] font-bold tracking-tight text-slate-900">
                 {profile.businessName || 'Not added yet'}
               </p>
-              <p className="text-xs text-slate-500 truncate">
+              <p className="text-[12px] text-slate-500 truncate">
                 Primary organization
               </p>
             </div>
@@ -379,13 +379,13 @@ export default function ProfilePage() {
               <FileText size={20} />
             </div>
             <div className="min-w-0">
-              <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
                 Total Invoices
               </p>
-              <p className="mt-0.5 text-lg font-bold text-slate-900">
+              <p className="mt-0.5 text-[20px] font-bold tracking-tight text-slate-900">
                 {prodStats.loading ? '—' : `${prodStats.totalInvoices} Invoices`}
               </p>
-              <p className="text-xs text-slate-500">
+              <p className="text-[12px] text-slate-500">
                 Recorded in database
               </p>
             </div>
@@ -399,13 +399,13 @@ export default function ProfilePage() {
               <Wallet size={20} />
             </div>
             <div className="min-w-0">
-              <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+              <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
                 Payments Received
               </p>
-              <p className="mt-0.5 text-lg font-bold text-slate-900">
+              <p className="mt-0.5 text-[20px] font-bold tracking-tight text-slate-900">
                 {prodStats.loading ? '—' : formatCurrency(prodStats.paymentsReceived)}
               </p>
-              <p className="text-xs text-slate-500">
+              <p className="text-[12px] text-slate-500">
                 Lifetime settled payments
               </p>
             </div>
@@ -457,8 +457,8 @@ export default function ProfilePage() {
                     <UserRound size={18} />
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 text-base">Personal Information</h3>
-                    <p className="text-xs text-slate-500">Contact details and workspace identity</p>
+                    <h3 className="font-semibold text-slate-900 text-[16px]">Personal Information</h3>
+                    <p className="text-[13px] text-slate-500">Contact details and workspace identity</p>
                   </div>
                 </div>
 
@@ -475,7 +475,7 @@ export default function ProfilePage() {
               <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 {/* Full Name */}
                 <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-3.5">
-                  <p className="text-xs font-medium uppercase tracking-wider text-slate-400">
+                  <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
                     Full Name
                   </p>
                   <p className="mt-1 font-semibold text-slate-900 text-sm">
@@ -486,7 +486,7 @@ export default function ProfilePage() {
                 {/* Email Address with Copy Button */}
                 <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-3.5">
                   <div className="flex items-center justify-between">
-                    <p className="text-xs font-medium uppercase tracking-wider text-slate-400">
+                    <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
                       Email Address
                     </p>
                     {profile.email && (

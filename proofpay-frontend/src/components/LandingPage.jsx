@@ -47,7 +47,7 @@ function Brand({ light = false }) {
           <path d="M12 3.5h6.5A2.5 2.5 0 0 1 21 6v12a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 18V6a2.5 2.5 0 0 1 2.5-2.5H12Z" stroke="currentColor" strokeWidth="1.4" opacity=".7" />
         </svg>
       </span>
-      <span className="text-[21px] font-bold tracking-tight">ProofPay</span>
+      <span className="text-[20px] font-bold tracking-tight">ProofPay</span>
     </a>
   )
 }
@@ -89,7 +89,7 @@ function DashboardPreview() {
             <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
           </div>
           <span className="hidden text-[11px] font-medium text-slate-400 sm:block">app.proofpay.in / overview</span>
-          <span className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-semibold text-emerald-700"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Live overview</span>
+          <span className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-700"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Live overview</span>
         </div>
         <div className="grid min-h-[365px] grid-cols-[62px_1fr] sm:grid-cols-[154px_1fr]">
           <aside className="border-r border-slate-100 bg-slate-50/80 p-2.5 sm:p-3.5">
@@ -128,7 +128,7 @@ function DashboardPreview() {
                   <div key={c.name} className="flex items-center gap-2 border-b border-slate-50 py-3 last:border-0 sm:gap-3">
                     <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-[9px] font-bold sm:h-8 sm:w-8 ${c.tone === 'blue' ? 'bg-blue-50 text-blue-700' : c.tone === 'green' ? 'bg-emerald-50 text-emerald-700' : 'bg-rose-50 text-rose-700'}`}>{c.initials}</span>
                     <div className="min-w-0 flex-1"><p className="truncate text-[10px] font-semibold text-slate-800 sm:text-xs">{c.name}</p><p className="mt-0.5 text-[9px] text-slate-400">{c.sub}</p></div>
-                    <div className="text-right"><p className="text-[10px] font-semibold text-slate-800 sm:text-xs">{c.amount}</p><span className={`mt-1 inline-block rounded-full px-1.5 py-0.5 text-[8px] font-semibold sm:text-[9px] ${c.tone === 'blue' ? 'bg-blue-50 text-blue-700' : c.tone === 'green' ? 'bg-emerald-50 text-emerald-700' : 'bg-rose-50 text-rose-700'}`}>{c.status}</span></div>
+                    <div className="text-right"><p className="text-[10px] font-semibold text-slate-800 sm:text-xs">{c.amount}</p><span className={`mt-1 inline-block rounded-full px-1.5 py-0.5 text-[9px] font-semibold sm:text-[10px] ${c.tone === 'blue' ? 'bg-blue-50 text-blue-700' : c.tone === 'green' ? 'bg-emerald-50 text-emerald-700' : 'bg-rose-50 text-rose-700'}`}>{c.status}</span></div>
                   </div>
                 ))}
               </div>
@@ -286,8 +286,8 @@ export default function LandingPage({ onNavigate }) {
 
       <footer className="border-t border-slate-200 bg-white px-5 py-8 sm:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-          <div><Brand /><p className="mt-3 text-xs text-slate-500">A clearer way to manage the money and records behind your business.</p></div>
-          <div className="flex flex-wrap gap-x-6 gap-y-3 text-xs font-medium text-slate-500"><a href="#features" className="hover:text-blue-600">Features</a><a href="#how-it-works" className="hover:text-blue-600">How it works</a><a href="#get-started" className="hover:text-blue-600">Get started</a><a href="mailto:hello@proofpay.example" className="hover:text-blue-600">Contact</a></div>
+          <div><Brand /><p className="mt-3 text-[13px] text-slate-500">A clearer way to manage the money and records behind your business.</p></div>
+          <div className="flex flex-wrap gap-x-6 gap-y-3 text-[13px] font-medium text-slate-500"><a href="#features" className="hover:text-blue-600">Features</a><a href="#how-it-works" className="hover:text-blue-600">How it works</a><a href="#get-started" className="hover:text-blue-600">Get started</a><a href="mailto:hello@proofpay.example" className="hover:text-blue-600">Contact</a></div>
           <p className="text-xs text-slate-400">© {new Date().getFullYear()} ProofPay. Demo concept.</p>
         </div>
       </footer>

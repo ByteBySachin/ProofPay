@@ -38,14 +38,14 @@ export default function ProfileSettingsPage() {
   return (
     <section className="mx-auto w-full max-w-[1000px] space-y-6 pb-8">
       <header>
-        <p className="mb-2 text-xs font-medium text-slate-400">Workspace / Settings / Profile Settings</p>
-        <h1 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-[28px]">Profile Settings</h1>
+        <p className="mb-2 text-[12px] font-medium text-slate-400">Workspace / Settings / Profile Settings</p>
+        <h1 className="text-[26px] sm:text-[28px] font-semibold tracking-tight text-slate-900">Profile Settings</h1>
         <p className="mt-1.5 text-sm leading-6 text-slate-500">Edit the personal details associated with your ProofPay profile.</p>
       </header>
       <form onSubmit={submit} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
         <div className="flex items-center gap-3 border-b border-slate-100 p-5 sm:px-6">
           <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600"><UserRound size={20} /></span>
-          <div><h2 className="font-semibold text-slate-900">Personal details</h2><p className="mt-1 text-sm text-slate-500">Name and contact information only.</p></div>
+          <div><h2 className="text-[16px] font-semibold text-slate-900">Personal details</h2><p className="mt-1 text-sm text-slate-500">Name and contact information only.</p></div>
         </div>
         <div className="grid gap-5 p-5 sm:grid-cols-2 sm:p-6">
           <label className="text-sm font-medium text-slate-700">Full name
@@ -59,7 +59,7 @@ export default function ProfileSettingsPage() {
           </label>
         </div>
         <div className="flex flex-col-reverse gap-3 border-t border-slate-100 p-5 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <p className="text-xs text-slate-400">Changes are saved locally for this session.</p>
+          <p className="text-[12px] text-slate-400">Changes are saved locally for this session.</p>
           <button className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700" type="submit">{saved ? <CheckCircle2 size={17} /> : <Save size={17} />}{saved ? 'Profile settings saved' : 'Save profile settings'}</button>
         </div>
       </form>

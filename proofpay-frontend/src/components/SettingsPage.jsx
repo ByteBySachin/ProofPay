@@ -10,15 +10,15 @@ export default function SettingsPage({ onNavigate }) {
   return (
     <section className="mx-auto w-full max-w-[1000px] space-y-6 pb-8">
       <header>
-        <p className="mb-2 text-xs font-medium text-slate-400">Workspace / Settings</p>
-        <h1 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-[28px]">Settings</h1>
+        <p className="mb-2 text-[12px] font-medium text-slate-400">Workspace / Settings</p>
+        <h1 className="text-[26px] sm:text-[28px] font-semibold tracking-tight text-slate-900">Settings</h1>
         <p className="mt-1.5 text-sm leading-6 text-slate-500">Choose what you want to configure in your ProofPay workspace.</p>
       </header>
       <div className="grid gap-4 md:grid-cols-3">
         {items.map(({ title, description, page, icon: Icon, color }) => (
           <button key={page} type="button" onClick={() => onNavigate(page)} className="group flex min-h-52 flex-col rounded-2xl border border-slate-200 bg-white p-5 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md">
             <span className={`flex h-11 w-11 items-center justify-center rounded-xl ${color}`}><Icon size={21} /></span>
-            <span className="mt-5 flex w-full items-center justify-between gap-2 font-semibold text-slate-900">{title}<ChevronRight size={18} className="text-slate-400 transition group-hover:translate-x-1 group-hover:text-blue-600" /></span>
+            <span className="mt-5 flex w-full items-center justify-between gap-2 text-[16px] font-semibold text-slate-900">{title}<ChevronRight size={18} className="text-slate-400 transition group-hover:translate-x-1 group-hover:text-blue-600" /></span>
             <span className="mt-2 text-sm leading-6 text-slate-500">{description}</span>
           </button>
         ))}
